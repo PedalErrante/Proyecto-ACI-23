@@ -47,3 +47,10 @@ for i in range(0,4):
     name = respuesta_json["imdata"][i]["topSystem"]["attributes"]["name"]
 
     print(" name: " +name+ " IP: " +direccion_ip+ " mac-addres: " +mac+ " state: " +state)
+
+#en la peticion
+print(respuesta.request.url)
+print("Peticion",respuesta.request.headers)
+
+#en la repuesta
+print("Respuesta",respuesta.headers)

@@ -31,12 +31,13 @@ print("API-Token: "+ API_token)
 #GET http://apic-ip-address/api/class/topSystem.json
 
 
-url = "https://10.10.20.14/api/class/topSystems.json"
+url = "https://10.10.20.114/api/class/topSystems.json"
 cabecera = {"Content-Type": "application/json"}
-cookie = {'APIC-cookie': API_token}
+cookie = {'APIC-cookie':API_token}
 
 try:
     respuesta = requests.get(url, headers=cabecera, cookies=cookie, verify=False)
+
 except Exception as err:
     print("Falla la peticion")
     exit(1)
